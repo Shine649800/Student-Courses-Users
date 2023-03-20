@@ -28,8 +28,6 @@ router.get('/students', redirectGuest, studentController.viewAll);
 router.get('/students/profile/:id', redirectGuest, studentController.viewProfile);
 router.get('/students/edit/:id', redirectGuest, studentController.renderEditForm);
 router.post('/students/edit/:id', redirectGuest, studentController.updateStudent);
-router.get('/students/add', redirectGuest, studentController.renderAddForm);
-router.post('/students/add', redirectGuest, studentController.addStudent);
 router.get('/students/delete/:id', redirectGuest, studentController.deleteStudent);
 
 router.post('/students/:studentId/enroll/', redirectGuest, studentController.enrollStudent);

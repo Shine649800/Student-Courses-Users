@@ -39,7 +39,14 @@ module.exports = (sequelize, DataTypes) => {
       }
       return allowedActions.indexOf(action)!== -1
     }
-  };
+  }
+    matchesStudentId(id)
+    {
+        if (!this.student) {
+            return false;
+        }
+        return this.student.id === id;
+    };
   User.init({
     email: DataTypes.STRING,
     password: DataTypes.STRING,
